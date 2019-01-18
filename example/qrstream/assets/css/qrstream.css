@@ -1,0 +1,34 @@
+
+.qrstream-container {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.qrcode-container {
+  width: 90%;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+.qrcode-container .element {
+	width: 100%;
+	/*border: solid 10px red;*/
+  min-width: 300px;
+  max-width: 640px;
+}
+
+.qrcode-container img {
+  display: block;
+  width: 500px;
+  height: 500px;
+  border: solid 1px #aaa;
+  /*width: 100%;*/
+  /*height: auto;*/
+}

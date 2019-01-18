@@ -1,0 +1,39 @@
+{
+  "name": "qrstream",
+  "version": "0.0.2",
+  "description": "A javascript library for transfer data using QR Code streaming",
+  "main": "index.js",
+  "dependencies": {
+    "md5": "^2.2.1",
+    "qrcode-generator": "^1.4.1"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "mock-fs": "^4.7.0"
+  },
+  "scripts": {
+    "example": "browserify example/qrstream/assets/js/index.js -o example/qrstream/assets/js/qrstream.bundle.js",
+    "test": "mocha --reporter spec",
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huajianmao/qrstream.js.git"
+  },
+  "keywords": [
+    "QR",
+    "Code",
+    "Transfer",
+    "Stream"
+  ],
+  "author": "Huajian Mao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huajianmao/qrstream.js/issues"
+  },
+  "homepage": "https://github.com/huajianmao/qrstream.js#readme"
+}

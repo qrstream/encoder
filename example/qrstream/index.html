@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/css/qrstream.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+
+  <title>QRStream</title>
+</head>
+<body>
+  <div class="qrstream-container">
+    <div class="w-100">
+      <div class="d-flex justify-content-center">
+        <img src="assets/images/qrstream.png" alt="logo">
+      </div>
+
+      <div class="d-flex justify-content-center mb-5">
+      <div class="input-group w-50">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputFile" aria-describedby="inputGroupFileAddon01">
+          <label id="inputFileLabel" class="custom-file-label" for="inputFile">Choose File</label>
+        </div>
+        <div class="ml-5">
+          <span class="btn btn-success" id="generateButton">Generate</span>
+        </div>
+        <div class="ml-2">
+          <span class="btn btn-danger" id="clearButton">Clear!</span>
+        </div>
+      </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center qrcode-container">
+          <div class="container-fluid mb-2">
+          <div class="row">
+            <div class="col-md m-3 d-flex justify-content-center element">
+              <div class="flex-column">
+                <div class="d-flex justify-content-center mb-2 h2">Metadata</div>
+                <img id="metaImage" alt="Metadata Image" class="img-thumbnail">
+              </div>
+            </div>
+            <div class="col-md m-3 d-flex justify-content-center element">
+              <div class="flex-column">
+                <div class="d-flex justify-content-center mb-2 h2">QR Code Stream</div>
+                <img id="streamImage" alt="Streaming images" class="img-thumbnail">
+              </div>
+            </div>
+            <div class="col-md m-3 d-flex justify-content-center element">
+              <div class="flex-column">
+                <div class="d-flex justify-content-center mb-2">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Missing Frames:</span>
+                    </div>
+                    <input id="missingFrame" type="text" class="form-control"
+                           placeholder="Frame ID: 1">
+                    <span id="findMissingButton" class="btn btn-primary ml-3">Find</span>
+                  </div>
+                </div>
+                <img id="missingImage" alt="Missing Frames" class="img-thumbnail">
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/qrstream.bundle.js"> </script>
+</body>
+</html>
