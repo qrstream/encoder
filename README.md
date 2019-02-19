@@ -1,10 +1,8 @@
-QRStream
+QRStream Encoder
 =========
 
-[![Build Status](https://travis-ci.org/huajianmao/qrstream.js.svg?branch=master)](https://travis-ci.org/huajianmao/qrstream.js)
-[![Coverage Status](https://coveralls.io/repos/github/huajianmao/qrstream.js/badge.svg)](https://coveralls.io/github/huajianmao/qrstream.js)
-
-## This is a Work In Progress!!! ⚠
+[![Build Status](https://travis-ci.org/qrstream/encoder.svg?branch=master)](https://travis-ci.org/qrstream/encoder)
+[![Coverage Status](https://coveralls.io/repos/github/qrstream/encoder/badge.svg?branch=master)](https://coveralls.io/github/qrstream/encoder?branch=master)
 
 A javascript library for transfer data using QR Code streaming
 
