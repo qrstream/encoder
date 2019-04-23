@@ -14,34 +14,44 @@ A javascript library for transfer data using QR Code streaming
 
 ### Use as npm package
   ``` javascript
-    var qrstream = require('qrstream');
-    var qr = qrstream(500, 640);
+    var qrstream = require('qrstream-encoder');
+    var capacity = 500;
+    var qr = qrstream(capacity);
     qr.load("TEXT", "Hello world");
     var {meta, images} = qr.encode();
   ```
 
 ### Use in browser
+  0 install `qrstream-encoder`
+  ``` shell
+  # It is OK to use npm in a blank directory.
+  # If the package.json file does not exist, it will warn you. Just ignore it.
+  npm install qrstream/encoder
+  ```
 
   1 create a `app.js` file using qrstream
   ``` shell
     "use strict;"
-    var qrstream = require('qrstream');
-    var qr = qrstream(500, 640);
+    var qrstream = require('qrstream-encoder');
+    var capacity = 500;
+    var qr = qrstream(capacity);
     qr.load("TEXT", "this is for the example");
 
     let {meta, images} = qr.encode();
+
+    // Show the images on your page with javascript
     document.getElementById("metaImage").src = meta;
   ```
 
   2 bundle the js
   ``` shell
     sudo npm install -g browserify
-    browserify app.js -o you.bundle.js
+    browserify app.js -o somename.bundle.js
   ```
 
   3 include it in your html file
   ``` html
-    <script type="text/javascript" src="assets/js/qrstream.bundle.js"> </script>
+    <script type="text/javascript" src="assets/js/somename.bundle.js"> </script>
   ```
 
 ## Tests
