@@ -8,7 +8,7 @@ A javascript library for transfer data using QR Code streaming
 
 ## Installation
 
-  `npm install qrstream`
+  `npm install qrstream/encoder`
 
 ## Usage
 
@@ -35,6 +35,7 @@ A javascript library for transfer data using QR Code streaming
 
   2 bundle the js
   ``` shell
+    sudo npm install -g browserify
     browserify app.js -o you.bundle.js
   ```
 

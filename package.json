@@ -1,7 +1,7 @@
 {
-  "name": "qrstream",
+  "name": "qrstream-encoder",
   "version": "0.0.2",
-  "description": "A javascript library for transfer data using QR Code streaming",
+  "description": "A javascript library encoding data to QR code streaming",
   "main": "index.js",
   "dependencies": {
     "md5": "^2.2.1",
@@ -16,13 +16,13 @@
     "mock-fs": "^4.7.0"
   },
   "scripts": {
-    "example": "browserify example/qrstream/assets/js/index.js -o example/qrstream/assets/js/qrstream.bundle.js",
+    "example": "browserify example/web/assets/js/index.js -o example/web/assets/js/qrstream.bundle.js",
     "test": "mocha --reporter spec",
     "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huajianmao/qrstream.js.git"
+    "url": "git+https://github.com/qrstream/encoder.git"
   },
   "keywords": [
     "QR",
@@ -33,7 +33,7 @@
   "author": "Huajian Mao",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/huajianmao/qrstream.js/issues"
+    "url": "https://github.com/qrstream/encoder/issues"
   },
-  "homepage": "https://github.com/huajianmao/qrstream.js#readme"
+  "homepage": "https://qrstream.github.io"
 }
