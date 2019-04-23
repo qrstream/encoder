@@ -30,7 +30,7 @@ A javascript library for transfer data using QR Code streaming
   ```
 
   1 create a `app.js` file using qrstream
-  ``` shell
+  ``` javascript
     "use strict;"
     var qrstream = require('qrstream-encoder');
     var capacity = 500;
