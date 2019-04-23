@@ -54,26 +54,21 @@ var qrstream = function () {
       switch (type) {
         case "TEXT":
           payload.type = "TEXT";
+          payload.content = content;
+          payload.size = content.length;
+          payload.md5sum = md5(content);
           break;
         case "FILE":
           payload.type = "FILE";
+          payload.name = filename; // payload.path.split("/").pop();
+          payload.content = content; // fs.readFileSync(payload.path, "utf8");
+          payload.size = payload.content.length;
+          payload.md5sum = md5(payload.content);
           break;
         default:
           errorCode = -1;
           payload.type = undefined;
           return errorCode;
-      }
-
-      if (payload.type === "FILE") {
-        // payload.path = content;
-        payload.name = filename; // payload.path.split("/").pop();
-        payload.content = content; // fs.readFileSync(payload.path, "utf8");
-        payload.size = payload.content.length;
-        payload.md5sum = md5(payload.content);
-      } else if (payload.type === "TEXT") {
-        payload.content = content;
-        payload.size = content.length;
-        payload.md5sum = md5(content);
       }
 
       payload.count = Math.ceil(payload.size / _netPayloadSize());

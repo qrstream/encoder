@@ -39,6 +39,12 @@ describe('#qrstream', function() {
     expect(errorCode).to.equal(-1);
   });
 
+  it('should return errorCode -1', function() {
+    var qrstream = Encoder(500);
+    var errorCode = qrstream.load(undefined, "", "");
+    expect(errorCode).to.equal(-1);
+  });
+
   it('should encode correctly', function() {
     var qrstream = Encoder(500);
     var errorCode = qrstream.load("TEXT", "Hello world");
