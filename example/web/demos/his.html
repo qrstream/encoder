@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/his.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <title>HIS demo with QRStream</title>
+  </head>
+
+ 
+  <body>
+      <div class="tag-box server flex-center">Server Side</div>
+      <div class="tag-box client flex-center">Client Side</div>
+      <div class="top-left flex-center">
+        <div>
+          <img src="../assets/images/blood.jpg" class="img-thumbnail" />
+        </div>
+      </div>
+      <div class="bottom-left flex-center">
+        <div class="content-box">
+          <textarea disabled>
+          {
+            "blood test": {
+              "tag": "CBC With Differential/Platelet",
+              "results": [
+                 { "test": "WBC", "RESULT": 5.7, "FLAG": "", "UNITS": "x10E3/uL", "REFERENCES INTERVAL": "4.0-10.5", "LAB": "01" },
+                 { "test": "RBC", "RESULT": 5.27, "FLAG": "", "UNITS": "x10E6/uL", "REFERENCES INTERVAL": "4.10-5.60", "LAB": "01" },
+                 { "test": "Hemoglobin", "RESULT": 15.4, "FLAG": "", "UNITS": "g/dL", "REFERENCES INTERVAL": "12.5-17.0", "LAB": "01" },
+                 { "test": "Hematocrit", "RESULT": 44.1, "FLAG": "", "UNITS": "%", "REFERENCES INTERVAL": "36.0-50.0", "LAB": "01" },
+                 { "test": "MCV", "RESULT": 84, "FLAG": "", "UNITS": "fL", "REFERENCES INTERVAL": "80-98", "LAB": "01" },
+                 { "test": "MCH", "RESULT": 29.2, "FLAG": "", "UNITS": "pg", "REFERENCES INTERVAL": "27.0-34.0", "LAB": "01" },
+                 { "test": "MCHC", "RESULT": 34.9, "FLAG": "", "UNITS": "g/dL", "REFERENCES INTERVAL": "32.0-36.0", "LAB": "01" },
+                 { "test": "RDW", "RESULT": 13.7, "FLAG": "", "UNITS": "%", "REFERENCES INTERVAL": "11.7-15.0", "LAB": "01" },
+                 { "test": "Platelets", "RESULT": 268, "FLAG": "", "UNITS": "x10E3/uL", "REFERENCES INTERVAL": "140-415", "LAB": "01" },
+                 { "test": "Neutrophils", "RESULT": 47, "FLAG": "", "UNITS": "%", "REFERENCES INTERVAL": "40-74", "LAB": "01" },
+                 { "test": "Lymphs", "RESULT": 46, "FLAG": "", "UNITS": "%", "REFERENCES INTERVAL": "14-46", "LAB": "01" },
+                 { "test": "Monocytes", "RESULT": 6, "FLAG": "", "UNITS": "%", "REFERENCES INTERVAL": "4-13", "LAB": "01" },
+                 { "test": "Eos", "RESULT": 1, "FLAG": "", "UNITS": "%", "REFERENCES INTERVAL": "0-7", "LAB": "01" },
+                 { "test": "Basos", "RESULT": 0, "FLAG": "", "UNITS": "%", "REFERENCES INTERVAL": "0-3", "LAB": "01" },
+                 { "test": "Neutrophils (Absolute)", "RESULT": 2.6, "FLAG": "", "UNITS": "x10E3/uL", "REFERENCES INTERVAL": "1.8-7.8", "LAB": "01" },
+                 { "test": "Lymphs (Absolute)", "RESULT": 2.6, "FLAG": "", "UNITS": "x10E3/uL", "REFERENCES INTERVAL": "0.7-4.5", "LAB": "01" },
+                 { "test": "Monocytes (Absolute)", "RESULT": 0.4, "FLAG": "", "UNITS": "x10E3/uL", "REFERENCES INTERVAL": "0.1-1.0", "LAB": "01" },
+                 { "test": "Eos (Absolute)", "RESULT": 0.1, "FLAG": "", "UNITS": "x10E3/uL", "REFERENCES INTERVAL": "0.0-0.4", "LAB": "01" },
+                 { "test": "Basos (Absolute)", "RESULT": 0.0, "FLAG": "", "UNITS": "x10E3/uL", "REFERENCES INTERVAL": "0.0-0.2", "LAB": "01" },
+                 { "test": "Immature Granulocytes", "RESULT": 0, "FLAG": "", "UNITS": "%", "REFERENCES INTERVAL": "0-1", "LAB": "01" },
+                 { "test": "Immature Grans (Abs)", "RESULT": 0.0, "FLAG": "", "UNITS": "x10E3/uL", "REFERENCES INTERVAL": "0.0-0.1", "LAB": "01" },
+              ]
+            }
+          }
+          </textarea>
+        </div>
+      </div>
+      <div class="top-right flex-center">
+        <div class="client-box row flex-center">
+          <div class="col-3">
+            <a href="/">
+              <img src="../assets/images/demo/his/client.1.jpg" class="img-thumbnail">
+            </a>
+          </div>
+          <div class="col-3">
+            <img src="../assets/images/demo/his/client.2.jpg" class="img-thumbnail">
+          </div>
+          <div class="col-3">
+            <img src="../assets/images/demo/his/client.3.jpg" class="img-thumbnail">
+          </div>
+          <div class="col-3">
+            <img src="../assets/images/demo/his/client.4.jpg" class="img-thumbnail">
+          </div>
+        </div>
+      </div>
+      <div class="bottom-right flex-center">
+        <div class="qrstream-box row">
+          <div class="col-4">
+            <div class="col-md mt-3 d-flex justify-content-center element">
+              <div class="flex-column" style="width: 100%;">
+                <div class="d-flex justify-content-center mb-2 h2">Metadata</div>
+                <img id="metaImage" src="../assets/images/demo/his/metadata.png" style="width: 100%;" alt="QR code image with meta data" class="img-thumbnail">
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="col-md mt-3 d-flex justify-content-center element">
+              <div class="flex-column" style="width: 100%;">
+                <div class="d-flex justify-content-center mb-2 h2">QR code stream</div>
+                <img id="streamImage" src="../assets/images/demo/his/1.png" style="width: 100%;" alt="QR code image with meta data" class="img-thumbnail">
+              </div>
+            </div> 
+          </div>
+          <div class="col-4">
+            <div class="col-md mt-3 d-flex justify-content-center element">
+              <div class="flex-column" style="width: 100%;">
+                <div class="d-flex justify-content-center mb-2">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">ID:</span>
+                    </div>
+                    <input id="missingFrame" type="text" class="form-control"
+                            placeholder="Frame ID: 1">
+                    <span id="findMissingButton" class="btn btn-info ml-3">Find</span>
+                  </div>
+                </div>
+                <img id="missingImage" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="width: 100%;" alt="Missing Frame here!" class="img-thumbnail">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="middle-left arrow-box flex-center">
+        <img src="../assets/images/arrow.png" />
+      </div>
+      <div class="middle-right arrow-box flex-center">
+        <img src="../assets/images/arrow.png" />
+      </div>
+      <div class="middle-top arrow-box flex-center">
+        <img src="../assets/images/arrow.1.png" />
+      </div>
+      <div class="middle-bottom arrow-box flex-center">
+        <img src="../assets/images/arrow.png" />
+      </div>
+    </body>
+
+    <script>
+      var streamImage = document.getElementById('streamImage');
+      let index = 0;
+      let intervalId = setInterval(function(){
+        streamImage.src = "../assets/images/demo/his/" + (index + 1) + ".png";
+        index++;
+        index = index % 6;
+      }, 1000);
+
+      var missingFrame = document.getElementById('missingFrame');
+      var findMissingButton = document.getElementById('findMissingButton');
+      var missingImageElement = document.getElementById('missingImage');
+      findMissingButton.addEventListener("click", function() {
+        console.log("here");
+        let id = missingFrame.value;
+        if (id > 6 || id <= 0) {
+          alert("Frame ID exceeds the range [1, " + 6 + "]!");
+        } else {
+          missingImageElement.src = "../assets/images/demo/his/" + id + ".png";
+        }
+      });
+
+      missingFrame.addEventListener("keyup", function (e) {
+        if (e.keyCode == 13) {
+          findMissingButton.click();
+        }
+      });
+    </script>
+  </html>
