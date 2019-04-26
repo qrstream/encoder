@@ -19,7 +19,7 @@ body {
 }
 
 .card-deck .card {
-  min-width: 320px;
+  min-width: 250px;
 }
 
 .card-body {
