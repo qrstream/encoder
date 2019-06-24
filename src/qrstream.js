@@ -1,5 +1,7 @@
 "use strict";
 
+var {Base64} = require('js-base64');
+
 var fs = require('fs');
 var md5 = require('md5');
 
@@ -51,6 +53,8 @@ var qrstream = function () {
       if (type) {
         type = type.toUpperCase();
       }
+      // console.log(Base64.encode(content));
+      content = Base64.encode(content);
       switch (type) {
         case "TEXT":
           payload.type = "TEXT";

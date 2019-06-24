@@ -4,6 +4,7 @@
   "description": "A javascript library encoding data to QR code streaming",
   "main": "index.js",
   "dependencies": {
+    "js-base64": "^2.5.1",
     "md5": "^2.2.1",
     "qrcode-generator": "^1.4.1"
   },
